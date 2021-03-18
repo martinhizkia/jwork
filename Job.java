@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Job here.
+ * Class yang berisi atribut dan method Job
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Martin Hizkia Parasi
+ * @version 18 Maret 2021
  */
 public class Job
 {
@@ -12,53 +12,112 @@ public class Job
     private String name;
     private int fee;
     private String category;
-
+    private Recruiter recruiter;
+    
     /**
      * Constructor for objects of class Job
+     * @param id berisikan id
+     * @param name berisikan nama jon
+     * @param recruiter berisikan object recruiter
+     * @param fee berisikan gaji
+     * @param category berisikan kategori job
      */
-    public Job()
+    public Job(int id, String name, Recruiter recruiter, int fee, String category)
     {
+        this.id = id;
+        this.recruiter = recruiter;
+        this.name = name;
+        this.fee = fee;
+        this.category = category;
         // initialise instance variables
     }
 
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * untuk mengembalikan nilai id
+     * @return id   id
      */
-    public static int getId()
+    public int getId()
     {
-        return 0;
+        return id;
     }
-    public static String getName()
+    /**
+     * untuk mengembalikan nama
+     * @return name berisikan nama yang dikembalikan
+     */
+    public String getName()
     {
-        return "oop";
+        return name;
     }
-    public static int getFee()
+    /**
+     * untuk mengembalikan fee
+     * @return fee berisikan fee yang dikembalikan
+     */
+    public int getFee()
     {
-        return 0;
+        return fee;
     }
-    public static String getCategory()
+    /**
+     * untuk mengembalikan category
+     * @return category berisikan category yang dikembalikan
+     */
+    public String getCategory()
     {
-        return "oop";
+        return category;
     }
-    public static void setId(int id)
+    /**
+     * untuk mengembalikan recruiter
+     * @return recruiter berisikan recruiter yang dikembalikan
+     */
+    public Recruiter getRecruiter()
     {
-       
+        return recruiter;
     }
-    public static void setName(String name)
+    /**
+     * memasukkan id 
+     * @param id berisikan id yang ingin dimasukkan
+     */
+    public void setId(int id)
     {
-       
+       this.id = id;
     }
-    public static void setFee(int fee)
+    /**
+     * memasukkan name
+     * @param id berisikan id yang ingin dimasukkan
+     */
+    public void setName(String name)
     {
-       
+       this.name = name;
     }
-    public static void setCategory(String category)
+    /**
+     * memasukkan Recruiter
+     * @param recruiter berisikan recruiter yang ingin dimasukkan
+     */
+    public void setRecruiter(Recruiter recruiter)
+    {
+       this.recruiter = recruiter;
+    }
+    /**
+     * memasukkan fee
+     * @param fee berisikan fee yang ingin dimasukkan
+     */
+    public void setFee(int fee)
+    {
+        this.fee = fee;
+    }
+    /**
+     * memasukkan category
+     * @param category berisikan category yang ingin dimasukkan
+     */
+    public void setCategory(String category)
+    {
+        this.category = category;
+    }
+    /**
+     * printdata
+     */
+    public void printData()
     {
         
     }
-    
     
 }

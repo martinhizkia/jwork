@@ -1,9 +1,8 @@
-
 /**
- * Write a description of class Jobseeker here.
+ * Class yang berisi atribut dan method Jobseeker
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Martin Hizkia Parasi
+ * @version 18 Maret 2021
  */
 public class Jobseeker
 {
@@ -13,54 +12,107 @@ public class Jobseeker
     private String email;
     private String password;
     private String joinDate;
-
     /**
      * Constructor for objects of class Jobseeker
+     * @param id berisikan id jobseeker
+     * @param name berisikan name jobseeker
+     * @param email berisikan email jobseeker
+     * @param password berisikan password jobseeker
+     * @param joinDate berisikan joinDate jobseeker
+     * 
      */
-    public Jobseeker()
+    public Jobseeker(int id, String name, String email, String password, String joinDate)
     {
-        // initialise instance variables
+        this.id = id;
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.joinDate = joinDate;
     }
-
     /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
+     * untuk mengembalikan nilai id
+     * @return id  
      */
-    public static int getId()
+    public int getId()
     {
-        return 0;
+        return id;
     }
-    public static String getName()
+    /**
+     * untuk mengembalikan nilai name
+     * @return name  mengembalikan name yang diinginkan
+     */
+    public String getName()
     {
-        return "oop";
+        return name;
     }
-    public static String getEmail()
+    /**
+     * untuk mengembalikan nilai email
+     * @return email  mengembalikan email yang diinginkan
+     */
+    public String getEmail()
     {
-        return "oop";
+        return email;
     }
-    public static String getPassword()
+    /**
+     * untuk mengembalikan password
+     * @return password  mengembalikan password yang diinginkan
+     */
+    public String getPassword()
     {
-        return "oop";
+        return password;
     }
-    public static String joinDate()
+    /**
+     * untuk mengembalikan joinDate
+     * @return joinDate  mengembalikan joinDate yang diinginkan
+     */
+     public String getJoinDate()
     {
-        return "oop";
+        return joinDate;
     }
-    public static void setId(int id)
+    /**
+     * memasukkan id 
+     * @param id berisikan id yang ingin dimasukkan
+     */
+    public void setId(int id)
     {
+        this.id = id;
     }
-    public static void setName(String Name)
+    /**
+     * memasukkan name
+     * @param id berisikan id yang ingin dimasukkan
+     */
+    public void setName(String name)
     {
+        this.name = name;
     }
-    public static void setEmail(String email)
+    /**
+     * untuk memasukkan email
+     * @param email berisikan email yang ingin dimasukkan
+     */
+    public void setEmail(String email)
     {
+        this.email = email;
     }
-    public static void setPassword(String password)
+    /**
+     * untuk memasukkan password
+     * @param password berisikan password yang ingin dimasukkan
+     */
+    public void setPassword(String password)
     {
+        this.password = password;
     }
-    public static void setJoinDate(String joinDate)
+    /**
+     * untuk memasukkan joinDate
+     * @param joinDate berisikan joinDate yang ingin dimasukkan
+     */
+    public void setJoinDate(String joinDate)
     {
+        this.joinDate = joinDate;
+    }
+    /**
+     * untuk mengeprint nama
+     */
+    public void printData() {
+        System.out.println(name);
     }
 }

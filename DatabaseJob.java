@@ -14,12 +14,6 @@ public class DatabaseJob {
     public DatabaseJob(){
        listJob = new String[123];
     }
-      /**
-     * Constructor Class DatabaseJob
-     */
-    public DatabaseJob(String[] listJob){
-        this.listJob = listJob;
-    }
     /**
      * addJob untuk menambah Job
      *
@@ -51,7 +45,6 @@ public class DatabaseJob {
      *
      * @return listJob string array
      */
-    public String[] getListJob(){
-        return listJob;
+    public void getListJob(){
     }
 }

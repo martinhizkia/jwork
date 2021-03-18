@@ -2,17 +2,14 @@
 /**
  * Write a description of class JWork here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Martin Hizkia Parasi
+ * @version 18 Maret 2021
  */
 public class JWork
 {
-    // instance variables - replace the example below with your own
     /**
-     * An example of a method - replace this comment with your own
+     * Main Method
      *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
      */
     public static void main(String[] args){
         Location location1 = new Location("DKI Jakarta", "Jakarta Pusat", "Tanah Abang");

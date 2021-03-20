@@ -21,10 +21,6 @@ public class JWork
         System.out.println(recruiter1.getName());
         job1.printData();
 
-        Recruiter recruiter2 = new Recruiter(1, "John", "martin@example.com", "123123123", new Location("DKI Jakarta", "Jakarta Pusat", "Tanah Abang"));
-        System.out.println(recruiter2.getName());
-        recruiter2.setName("Doe");
-        System.out.println(recruiter2.getName());
 
     }
 }

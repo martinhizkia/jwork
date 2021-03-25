@@ -7,20 +7,15 @@ public class DatabaseJob {
 /**
  * Variabel untuk menampung listjob
  */
-    private String[] listJob;
-    /**
-     * Inisialisas variabel
-     */
-    public DatabaseJob(){
-       listJob = new String[123];
-    }
+    private static String[] listJob;
+
     /**
      * addJob untuk menambah Job
      *
      * @param  job berisi object job
      * @return boolean (untuk sementara)
      */
-    public boolean addJob(Job job){
+    public static boolean addJob(Job job){
         return false;
     }
     /**
@@ -29,7 +24,7 @@ public class DatabaseJob {
      * @param  job berisi object job
      * @return boolean (untuk sementara)
      */
-    public boolean remove(Job job){
+    public static boolean remove(Job job){
         return false;
     }
     /**
@@ -37,7 +32,7 @@ public class DatabaseJob {
      *
      * @return null (untuk sementara)
      */
-    public Job getJob(){
+    public static Job getJob(){
         return null;
     }
     /**
@@ -45,6 +40,6 @@ public class DatabaseJob {
      *
      * @return listJob string array
      */
-    public void getListJob(){
+    public static void getListJob(){
     }
 }

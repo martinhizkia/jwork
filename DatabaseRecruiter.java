@@ -7,16 +7,7 @@
 public class DatabaseRecruiter
 {
     // instance variables - replace the example below with your own
-    private String[] listJob;
-
-    /**
-     * Constructor for objects of class DatabaseRecruiter
-     */
-    public DatabaseRecruiter()
-    {
-        // initialise instance variables
-        listJob = new String[123];
-    }
+    private static String[] listRecruiter;
 
     /**
      * An example of a method - replace this comment with your own
@@ -24,7 +15,7 @@ public class DatabaseRecruiter
      * @param  recruiter  objek recruiter
      * @return    boolean
      */
-    public boolean addRecruiter(Recruiter recruiter)
+    public static boolean addRecruiter(Recruiter recruiter)
     {
         // put your code here
         return false;
@@ -35,7 +26,7 @@ public class DatabaseRecruiter
      * @param  recruiter  objek recruiter
      * @return    boolean
      */
-    public boolean removeRecruiter(Recruiter recruiter)
+    public static boolean removeRecruiter(Recruiter recruiter)
     {
         // put your code here
         return false;
@@ -45,17 +36,17 @@ public class DatabaseRecruiter
      *
      * @return    null sementara
      */
-    public Recruiter getRecruiter()
+    public static Recruiter getRecruiter()
     {
         return null;
     }
      /**
      * Untuk mengembalikan list recruiter
      *
-     * @return    null sementara
+     * @return   String[] listrecruiter
      */
-    public String[] getListRecruiter()
+    public static String[] getListRecruiter()
     {
-        return null;
+        return listRecruiter;
     }
 }

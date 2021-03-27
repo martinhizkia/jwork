@@ -20,6 +20,12 @@ public class JWork
         recruiter1.setName("Hizkia");
         System.out.println(recruiter1.getName());
         job1.printData();
+        InvoiceStatus i1 = InvoiceStatus.Cancelled;
+        InvoiceStatus i2 = InvoiceStatus.Ongoing;
+        InvoiceStatus i3 = InvoiceStatus.Finished;
+        System.out.println(i1);
+        System.out.println(i2);
+        System.out.println(i3);
         invoice1.printData();
 
     }

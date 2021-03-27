@@ -10,9 +10,9 @@ public enum InvoiceStatus
     {
         this.status = status;
     }
-
+    @Override
     public String toString() 
     {
-        return this.status;
+        return status;
     }
 }

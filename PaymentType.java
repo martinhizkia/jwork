@@ -1,3 +1,9 @@
+/**
+ * Write a description of class DatabaseRecruiter here.
+ *
+ * @author Martin Hizkia Parasi
+ * @version 25 Maret 2021
+ */
 public enum PaymentType {
     BankPayment("Bank Payment"),
     EwalletPayment("E-wallet Payment");
@@ -9,14 +15,5 @@ public enum PaymentType {
     @Override
     public String toString(){
         return this.payment;
-    }
-
-    // Driver method
-    public static void main(String[] args)
-    {
-        PaymentType p1 = PaymentType.BankPayment;
-        PaymentType p2 = PaymentType.EwalletPayment;
-        System.out.println(p1);
-        System.out.println(p2);
     }
 }

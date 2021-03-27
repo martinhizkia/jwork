@@ -60,9 +60,9 @@ public class Job
      * untuk mengembalikan category
      * @return category berisikan category yang dikembalikan
      */
-    public String getCategory()
+    public JobCategory getCategory()
     {
-        return category.toString();
+        return category;
     }
     /**
      * untuk mengembalikan recruiter
@@ -125,6 +125,4 @@ public class Job
         System.out.println("Fee: " + fee);
         System.out.println("Category: " + category);
     };
-
-    
 }

@@ -1,20 +1,18 @@
-
 /**
  * class berisi atribut dan method invoice
  *
  * @author Martin Hizkia Parasi
  * @version 18 Maret 2021
  */
-public class Invoice
+public abstract class Invoice
 {
     // instance variables
     private int id;
-    private int idJob;
+    private Job job;
     private String date;
-    private int totalFee;
+    protected int totalFee;
     private Jobseeker jobseeker;
-    private PaymentType paymentType;
-    private InvoiceStatus status;
+    private InvoiceStatus invoiceStatus;
 
    /**
      * Constructor for objects of class Location
@@ -24,16 +22,13 @@ public class Invoice
      * @param totalFee merujuk gaji yang didapatkan
      * @param jobseeker merujuk object pencari job
      */
-    public Invoice(int id, int idJob, String date, int totalFee, Jobseeker jobseeker, PaymentType paymentType, InvoiceStatus status){
+    public Invoice(int id, Job job, String date, Jobseeker jobseeker, InvoiceStatus invoiceStatus){
         this.id = id;
-        this.idJob = idJob;
+        this.job = job;
         this.date = date;
-        this.totalFee = totalFee;
         this.jobseeker = jobseeker;
-        this.paymentType = paymentType;
-        this.status = status;
+        this.invoiceStatus = invoiceStatus;
     }
-
     /**
     * untuk mengembalikan id
     * @return id
@@ -45,8 +40,8 @@ public class Invoice
     * untuk mengembalikan idJon (pekerjaan)
     * @return idJob
     */
-    public int getIdJob(){
-        return idJob;
+    public Job getJob(){
+        return job;
     }
     /**
     * untuk mengembalikan tanggal
@@ -73,8 +68,8 @@ public class Invoice
      * method mutator untuk mengubah idJobs
      * @param  idJobs  nomor idJobs yang ingin dimasukkan
      */
-    public void setIdJobs(int idJobs){
-        this.idJob = idJobs;
+    public void setIdJobs(Job job){
+        this.job = job;
     }
     /**
      * method mutator untuk mengubah tanggal
@@ -85,11 +80,8 @@ public class Invoice
     }
     /**
      * method mutator untuk mengubah fee
-     * @param  totalFee  totalFee yang ingin dimasukkan
      */
-    public void setTotalFee(int totalFee){
-        this.totalFee = totalFee;
-    }
+    public abstract void setTotalFee();
     /**
      * method assesor untuk mengembalikan jobseeker
      * @return  jobseeker  objek jobseeker yang dikembalikan
@@ -101,15 +93,13 @@ public class Invoice
      * method assesor untuk mengembalikan payment type
      * @return  payment type  objek payment type yang dikembalikan
      */
-    public PaymentType getPaymentType() {
-        return paymentType;
-    }
+    public abstract PaymentType getPaymentType();
     /**
      * method assesor untuk mengembalikan InvoiceStatus
      * @return  InvoiceStatuse  objek InvoiceStatus yang dikembalikan
      */
     public InvoiceStatus getInvoiceStatus() {
-        return status;
+        return invoiceStatus;
     }
      /**
      * method memasukkan objek jobseeker
@@ -122,16 +112,6 @@ public class Invoice
      * method memasukkan objek jobseeker
      * @param  jobseeker  objek jobseeker yang dimasukkan
      */
-    public void setPaymentType(PaymentType paymentType) {
-        this.paymentType = paymentType;
-    }
-    public void printData(){
-        System.out.println("============ INVOICE ============");
-        System.out.println("ID: " + id);
-        System.out.println("ID Job: " + idJob);
-        System.out.println("Date: " + date);
-        System.out.println("Seeker: " + jobseeker.getName());
-        System.out.println("Fee: " + totalFee);
-        System.out.println("Status: " + status);
-    }
+
+    public abstract void printData();
 }

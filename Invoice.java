@@ -4,7 +4,7 @@
  * @author Martin Hizkia Parasi
  * @version 18 Maret 2021
  */
-public abstract class Invoice
+abstract class Invoice
 {
     // instance variables
     private int id;

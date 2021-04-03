@@ -21,9 +21,16 @@ public class JWork
         EwalletPayment invoice1 = new EwalletPayment(1, job1, "13 Desember 2021", jobseeker1,InvoiceStatus.Ongoing); 
         EwalletPayment invoice2 = new EwalletPayment(2, job2, "14 Desember 2021", jobseeker1,InvoiceStatus.Ongoing, bonus1);
         EwalletPayment invoice3 = new EwalletPayment(3, job1, "15 Desember 2021", jobseeker1,InvoiceStatus.Ongoing, bonus2);
-        invoice1.printData();
-        invoice2.printData();
-        invoice3.printData();
+        //
+        BankPayment bankpayment1 = new BankPayment(224, job1, "1/4/2020", jobseeker1, InvoiceStatus.Finished);
+        BankPayment bankpayment2 = new BankPayment(225, job2, "1/4/2020", jobseeker1, InvoiceStatus.Finished, 12);
+
+        bankpayment1.printData();
+        bankpayment2.printData();
+        //
+        // invoice1.printData();
+        // invoice2.printData();
+        // invoice3.printData();
 
 
         // System.out.println(recruiter1.getName());

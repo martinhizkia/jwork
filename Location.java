@@ -73,8 +73,8 @@ public class Location
     /**
      * untuk mengeprint provinsi
      */
-    public void printData()
-    {
-        System.out.println(province);
+    @Override
+    public String toString() {
+        return "Province = " + getProvince() + "\nCity = " + getCity() + "\nDescription = " + getDescription();
     }
 }

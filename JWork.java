@@ -1,3 +1,4 @@
+import java.util.GregorianCalendar;
 
 /**
  * Write a description of class JWork here.
@@ -15,23 +16,22 @@ public class JWork
         Recruiter recruiter1 = new Recruiter(1, "Martin", "martin@example.com", "123123123", location1);
         Job job1 = new Job(1, "Backend Engineer Solusimas", recruiter1, 10000, JobCategory.BackEnd);
         Job job2 = new Job(2, "Frontend Engineer Solusimas", recruiter1, 10000, JobCategory.FrontEnd);
-        Jobseeker jobseeker1 = new Jobseeker(1, "Hizkia", "martin1@example.com", "password123", "13 Maret 2021");
         Bonus bonus1 = new Bonus(33, "GRAB50HEMAT", 333, 1000, true);
         Bonus bonus2 = new Bonus(34, "GRAB50HEMAT", 222, 100221, true);
-        EwalletPayment invoice1 = new EwalletPayment(1, job1, "13 Desember 2021", jobseeker1,InvoiceStatus.Ongoing); 
-        EwalletPayment invoice2 = new EwalletPayment(2, job2, "14 Desember 2021", jobseeker1,InvoiceStatus.Ongoing, bonus1);
-        EwalletPayment invoice3 = new EwalletPayment(3, job1, "15 Desember 2021", jobseeker1,InvoiceStatus.Ongoing, bonus2);
-        //
-        BankPayment bankpayment1 = new BankPayment(224, job1, "1/4/2020", jobseeker1, InvoiceStatus.Finished);
-        BankPayment bankpayment2 = new BankPayment(225, job2, "1/4/2020", jobseeker1, InvoiceStatus.Finished, 12);
 
-        bankpayment1.printData();
-        bankpayment2.printData();
-        //
+        // EwalletPayment invoice1 = new EwalletPayment(1, job1, "13 Desember 2021", jobseeker1,InvoiceStatus.Ongoing); 
+        // EwalletPayment invoice2 = new EwalletPayment(2, job2, "14 Desember 2021", jobseeker1,InvoiceStatus.Ongoing, bonus1);
+        // EwalletPayment invoice3 = new EwalletPayment(3, job1, "15 Desember 2021", jobseeker1,InvoiceStatus.Ongoing, bonus2);
+
+        // BankPayment bankpayment1 = new BankPayment(224, job1, "1/4/2020", jobseeker1, InvoiceStatus.Finished);
+        // BankPayment bankpayment2 = new BankPayment(225, job2, "1/4/2020", jobseeker1, InvoiceStatus.Finished, 12);
+
+        // bankpayment1.printData();
+        // bankpayment2.printData();
+
         // invoice1.printData();
         // invoice2.printData();
         // invoice3.printData();
-
 
         // System.out.println(recruiter1.getName());
         // recruiter1.setName("Hizkia");
@@ -45,6 +45,11 @@ public class JWork
         // System.out.println(i3);
         // invoice1.printData();
 
-
+        Jobseeker js1 = new Jobseeker(1, "Martin", "marr123hizkia@ui.ac.id", "maAtinhizkia321", new GregorianCalendar(2000, 1, 15));
+        Jobseeker js2 = new Jobseeker(2, "Hizkia", "hizkia@ui.ac.id", "MartinKrean123", 2021, 03, 6);
+        Jobseeker js3 = new Jobseeker(3, "Parasi", "parasi@ui.ac.id", "MartinAeren41233");
+        System.out.println(js1.toString());
+        System.out.println(js2.toString());
+        System.out.println(js3.toString());
     }
 }

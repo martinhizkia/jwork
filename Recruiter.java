@@ -111,8 +111,10 @@ public class Recruiter
     /**
      * untuk mengeprint nama
      */
-    public void printData() {
-        System.out.println(name);
+    @Override
+    public String toString() {
+        return "Id = " + getId() + "\nNama = " + getName() + "\nEmail = " + getEmail() + "\nPhone Number = "
+                + getPhoneNumber() + "\nLocation = " + getLocation();
     }
 }
 

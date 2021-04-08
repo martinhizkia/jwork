@@ -112,7 +112,7 @@ public class Jobseeker
      * @param email berisikan email yang ingin dimasukkan
      */
     public void setEmail(String email){
-        String regex = "^[a-zA-Z0-9&*_~]+([\\.{1}]?[a-z]+)+@[a-z0-9]+([\\.]{1}[a-z]+)\\S+(?!.*?\\.\\.)";
+        String regex = "^[a-zA-Z0-9&*_~]+([\\.{1}]?[a-z0-9]+)+@[a-z0-9A-Z]+([\\.]{1}[a-z]+)\\S+(?!.*?\\.\\.)";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
         if(matcher.matches())

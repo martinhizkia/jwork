@@ -45,7 +45,7 @@ public class JWork
         // System.out.println(i3);
         // invoice1.printData();
 
-        Jobseeker js1 = new Jobseeker(1, "Martin", "marr123hizkia@ui.ac.id", "maAtinhizkia321", new GregorianCalendar(2000, 1, 15));
+        Jobseeker js1 = new Jobseeker(1, "Martin", "marrhizkia21a@ui.ac.id", "maAtinhizkia321", new GregorianCalendar(2000, 1, 15));
         Jobseeker js2 = new Jobseeker(2, "Hizkia", "hizkia@ui.ac.id", "MartinKrean123", 2021, 03, 6);
         Jobseeker js3 = new Jobseeker(3, "Parasi", "parasi@ui.ac.id", "MartinAeren41233");
         System.out.println(js1.toString());

@@ -1,3 +1,6 @@
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.util.GregorianCalendar;
 /**
  * class berisi atribut dan method invoice
  *
@@ -9,7 +12,7 @@ abstract class Invoice
     // instance variables
     private int id;
     private Job job;
-    private String date;
+    private Calendar date;
     protected int totalFee;
     private Jobseeker jobseeker;
     private InvoiceStatus invoiceStatus;
@@ -22,12 +25,12 @@ abstract class Invoice
      * @param totalFee merujuk gaji yang didapatkan
      * @param jobseeker merujuk object pencari job
      */
-    public Invoice(int id, Job job, String date, Jobseeker jobseeker, InvoiceStatus invoiceStatus){
+    public Invoice(int id, Job job, Jobseeker jobseeker, InvoiceStatus invoiceStatus){
         this.id = id;
         this.job = job;
-        this.date = date;
         this.jobseeker = jobseeker;
         this.invoiceStatus = invoiceStatus;
+        this.date = Calendar.getInstance();
     }
     /**
     * untuk mengembalikan id
@@ -47,7 +50,7 @@ abstract class Invoice
     * untuk mengembalikan tanggal
     * @return date
     */
-    public String getDate(){
+    public Calendar getDate(){
         return date;
     }
      /**
@@ -75,8 +78,11 @@ abstract class Invoice
      * method mutator untuk mengubah tanggal
      * @param  date  tanggal yang ingin dimasukkan
      */
-    public void setDate(String date){
+    public void setDate(Calendar date){
         this.date = date;
+    }
+    public void setDate(int year, int month, int dayOfMonth){
+        this.date = new GregorianCalendar(year, month - 1, dayOfMonth);
     }
     /**
      * method mutator untuk mengubah fee
@@ -113,5 +119,5 @@ abstract class Invoice
      * @param  jobseeker  objek jobseeker yang dimasukkan
      */
 
-    public abstract void printData();
+    public abstract String toString();
 }

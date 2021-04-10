@@ -14,8 +14,6 @@ public class JWork
     public static void main(String[] args){
         Location location1 = new Location("DKI Jakarta", "Jakarta Pusat", "Tanah Abang");
         Recruiter recruiter1 = new Recruiter(1, "Martin", "martin@example.com", "123123123", location1);
-        Job job1 = new Job(1, "Backend Engineer Solusimas", recruiter1, 10000, JobCategory.BackEnd);
-        Job job2 = new Job(2, "Frontend Engineer Solusimas", recruiter1, 10000, JobCategory.FrontEnd);
         Bonus bonus1 = new Bonus(33, "GRAB50HEMAT", 333, 1000, true);
         Bonus bonus2 = new Bonus(34, "GRAB50HEMAT", 222, 100221, true);
 
@@ -37,19 +35,30 @@ public class JWork
         // recruiter1.setName("Hizkia");
         // System.out.println(recruiter1.getName());
         // job1.printData();
-        // InvoiceStatus i1 = InvoiceStatus.Cancelled;
-        // InvoiceStatus i2 = InvoiceStatus.Ongoing;
-        // InvoiceStatus i3 = InvoiceStatus.Finished;
+        InvoiceStatus i1 = InvoiceStatus.Cancelled;
+        InvoiceStatus i2 = InvoiceStatus.Ongoing;
+        InvoiceStatus i3 = InvoiceStatus.Finished;
         // System.out.println(i1);
         // System.out.println(i2);
         // System.out.println(i3);
         // invoice1.printData();
 
-        Jobseeker js1 = new Jobseeker(1, "Martin", "marrhizkia21a@ui.ac.id", "maAtinhizkia321", new GregorianCalendar(2000, 1, 15));
+        Jobseeker js1 = new Jobseeker(1, "Martin", "marrhi..zkia21a@ui.ac.id", "maatinhizkia321", new GregorianCalendar(2000, 0, 15));
         Jobseeker js2 = new Jobseeker(2, "Hizkia", "hizkia@ui.ac.id", "MartinKrean123", 2021, 03, 6);
         Jobseeker js3 = new Jobseeker(3, "Parasi", "parasi@ui.ac.id", "MartinAeren41233");
-        System.out.println(js1.toString());
-        System.out.println(js2.toString());
-        System.out.println(js3.toString());
+        Job job1 = new Job(1, "Backend Engineer Solusimas", recruiter1, 10000, JobCategory.BackEnd);
+        Job job2 = new Job(2, "Frontend Engineer Solusimas", recruiter1, 10000, JobCategory.FrontEnd);
+        // System.out.println(js1.toString());
+        // System.out.println(js2.toString());
+        // System.out.println(js3.toString());
+        // js1.setEmail("martinhizkia@gg.gg");
+        // js1.setPassword("M123oqweqwe");
+        // System.out.println(js1.toString());
+
+        EwalletPayment ew1 = new EwalletPayment(2, job1, js2, i1);
+        BankPayment bp1 = new BankPayment(3, job1, js2, i1);
+        ew1.toString();
+        bp1.toString();
+        
     }
 }

@@ -3,43 +3,81 @@
  * @author Martin Hizkia Parasi
  * @version 18 Maret 2021
  */
-public class DatabaseJob {
-/**
- * Variabel untuk menampung listjob
- */
-    private static String[] listJob;
 
+import java.util.ArrayList;
+
+public class DatabaseJob {
+    // instance variable dari DatabaseJob
+    private static ArrayList<Job> JOB_DATABASE =  new ArrayList<Job>();
+    private static int lastId = 0;
     /**
-     * addJob untuk menambah Job
+     * fungsi untuk menambahkan objel job (
      *
-     * @param  job berisi object job
-     * @return boolean (untuk sementara)
+     * @return    boolean
      */
     public static boolean addJob(Job job){
-        return false;
+        JOB_DATABASE.add(job);
+        lastId = job.getId();
+        return true;
     }
+
     /**
-     * removeJob untuk menghapus Job
+     * metode untuk menghapus job
      *
-     * @param  job berisi object job
-     * @return boolean (untuk sementara)
+     * @return    boolean
      */
     public static boolean remove(Job job){
+        for (Job jobb : JOB_DATABASE) {
+            if (job.getId() == jobb.getId()) {
+                JOB_DATABASE.remove(job);
+                return true;
+            }
+        }
         return false;
     }
+
     /**
-     * getJob untuk mengembalikan objek Job
+     * fungsi untuk mengembalikan job
      *
-     * @return null (untuk sementara)
+     * @return    null
      */
-    public static Job getJob(){
-        return null;
+    public static ArrayList<Job> getJobDatabase(){
+        return JOB_DATABASE;
     }
-    /**
-     * getJob untuk mengembalikan array string listjob
-     *
-     * @return listJob string array
-     */
-    public static void getListJob(){
+
+    public static int getLastId(){
+        return lastId;
+    }
+
+    public static Job getJobById(int id){
+        Job x = null;
+        for (Job job : JOB_DATABASE) {
+            if (id == job.getId()) {
+                x = job;
+            }
+        }
+        return x;
+    }
+
+    public static ArrayList<Job> getJobByRecruiter(int recruiterId){
+        ArrayList<Job> temp = new ArrayList<Job>();
+        for (Job job : JOB_DATABASE) {
+            if (recruiterId == job.getRecruiter().getId()) {
+                temp.add(job);
+            } else {
+                return null;
+            }
+        }
+        return temp;
+    }
+
+    public static ArrayList<Job> getJobByCategory(JobCategory category) {
+        ArrayList<Job> temp = new ArrayList<Job>();
+        for (int i = 0; i < JOB_DATABASE.size(); i++) {
+            if (category == JOB_DATABASE.get(i).getCategory()) {
+                temp.add(JOB_DATABASE.get(i));
+            }
+        }
+        return temp;
     }
 }

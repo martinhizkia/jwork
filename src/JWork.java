@@ -63,16 +63,19 @@ public class JWork
 //        System.out.println(bp1.toString());
 
 
+//        Location location1 = new Location("DKI Jakarta", "Jakarta Pusat", "Tanah Abang");
+//        DatabaseRecruiter.addRecruiter(new Recruiter(DatabaseRecruiter.getLastId() + 1, "Martin", "martin@example.com", "123123123", location1));
+//        DatabaseJobSeeker.addJobseeker(new Jobseeker(DatabaseJobSeeker.getLastId() + 1, "Hizkia", "hizkia@ui.ac.id", "MartinKrean123", 2021, 03, 6));
+//        DatabaseJobSeeker.addJobseeker(new Jobseeker(DatabaseJobSeeker.getLastId() + 1, "Hizkia", "hizkia@ui.ac.id", "MartinKrean123", 2021, 04 ,6));
+//        DatabaseJobSeeker.addJobseeker(new Jobseeker(DatabaseJobSeeker.getLastId() + 1 , "Fajar", "fajar@ui.ac.id", "FajarJele123k", 2021, 03, 6));
+//        System.out.println(DatabaseJobSeeker.getDatabaseJobseeker());
+//        DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1, "Backend Engineer Solusimas", DatabaseRecruiter.getRecruiterById(1), 10000, JobCategory.FrontEnd));
+//        DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1, "Engineer Backend masSoulsi", DatabaseRecruiter.getRecruiterById(1), 20000, JobCategory.FrontEnd));
+//        DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1, "Frontend Engineer Solusimas", DatabaseRecruiter.getRecruiterById(1), 10000, JobCategory.Devops));
+//        System.out.println(DatabaseJob.getJobByCategory(JobCategory.FrontEnd));
         Location location1 = new Location("DKI Jakarta", "Jakarta Pusat", "Tanah Abang");
-        DatabaseRecruiter.addRecruiter(new Recruiter(DatabaseRecruiter.getLastId() + 1, "Martin", "martin@example.com", "123123123", location1));
-        DatabaseJobSeeker.addJobseeker(new Jobseeker(DatabaseJobSeeker.getLastId() + 1, "Hizkia", "hizkia@ui.ac.id", "MartinKrean123", 2021, 03, 6));
-        DatabaseJobSeeker.addJobseeker(new Jobseeker(DatabaseJobSeeker.getLastId() + 1, "Hizkia", "hizkia@ui.ac.id", "MartinKrean123", 2021, 04 ,6));
-        DatabaseJobSeeker.addJobseeker(new Jobseeker(DatabaseJobSeeker.getLastId() + 1 , "Fajar", "fajar@ui.ac.id", "FajarJele123k", 2021, 03, 6));
-        System.out.println(DatabaseJobSeeker.getDatabaseJobseeker());
-        DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1, "Backend Engineer Solusimas", DatabaseRecruiter.getRecruiterById(1), 10000, JobCategory.FrontEnd));
-        DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1, "Engineer Backend masSoulsi", DatabaseRecruiter.getRecruiterById(1), 20000, JobCategory.FrontEnd));
-        DatabaseJob.addJob(new Job(DatabaseJob.getLastId() + 1, "Frontend Engineer Solusimas", DatabaseRecruiter.getRecruiterById(1), 10000, JobCategory.Devops));
-        System.out.println(DatabaseJob.getJobByCategory(JobCategory.FrontEnd));
+        DatabaseBonus.addBonus(new Bonus(1, "QE40", 1000, 500, false));
+
 
 
 

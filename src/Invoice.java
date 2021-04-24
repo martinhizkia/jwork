@@ -86,6 +86,9 @@ abstract class Invoice
     public void setDate(int year, int month, int dayOfMonth){
         this.date = new GregorianCalendar(year, month - 1, dayOfMonth);
     }
+    public void setInvoiceStatus(InvoiceStatus invoiceStatus) {
+        this.invoiceStatus = invoiceStatus;
+    }
     /**
      * method mutator untuk mengubah fee
      */

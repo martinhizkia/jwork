@@ -26,16 +26,15 @@ public class DatabaseJob {
      *
      * @return    boolean
      */
-    public static boolean remove(Job job){
-        for (Job jobb : JOB_DATABASE) {
-            if (job.getId() == jobb.getId()) {
-                JOB_DATABASE.remove(job);
-                return true;
+    public static boolean removeJob(int id) throws JobNotFoundException {
+            for (Job job : JOB_DATABASE) {
+                if (job.getId() == id) {
+                    JOB_DATABASE.remove(job);
+                    return true;
+                }
             }
-        }
-        return false;
+        throw new JobNotFoundException(id);
     }
-
     /**
      * fungsi untuk mengembalikan job
      *
@@ -49,14 +48,19 @@ public class DatabaseJob {
         return lastId;
     }
 
-    public static Job getJobById(int id){
-        Job x = null;
-        for (Job job : JOB_DATABASE) {
-            if (id == job.getId()) {
-                x = job;
+    public static Job getJobById(int id) throws JobNotFoundException {
+        Job result = null;
+        for (Job el : JOB_DATABASE) {
+            if (el.getId() == id) {
+                result = el;
+                return result;
             }
         }
-        return x;
+        if (result == null){
+            throw new JobNotFoundException(id);
+        }
+
+        return result;
     }
 
     public static ArrayList<Job> getJobByRecruiter(int recruiterId){

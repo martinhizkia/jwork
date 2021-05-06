@@ -174,8 +174,9 @@ public class JWork
         } catch (JobseekerNotFoundException e) {
             e.printStackTrace();
         }
-        for (Invoice2 invoice : DatabaseInvoice.getInvoiceDatabase()){
-            new Thread(new FeeCalculator(Invoice2).start());
+
+        for (Invoice invoice : DatabaseInvoice.getInvoiceDatabase()){
+            new Thread(new FeeCalculator(invoice)).start();
         }
 
     }

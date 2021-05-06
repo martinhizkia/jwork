@@ -8,7 +8,7 @@ public class BankPayment extends Invoice{
 	public BankPayment(int id, ArrayList<Job> jobs,  Jobseeker jobseeker){
         super(id, jobs, jobseeker);
     }
-    public BankPayment(int id, ArrayList<Job> job, Jobseeker jobs, InvoiceStatus jobseeker,
+    public BankPayment(int id, Job job, ArrayList<Job> jobs,Jobseeker jobseeker,
                        int adminFee){
         super(id, jobs,  jobseeker);
         this.adminFee = adminFee;

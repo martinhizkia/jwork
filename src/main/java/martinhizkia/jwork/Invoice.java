@@ -9,7 +9,7 @@ import java.util.ArrayList;
  * @author Martin Hizkia Parasi
  * @version 18 Maret 2021
  */
-abstract class Invoice
+public abstract class Invoice
 {
     // instance variables
     private int id;

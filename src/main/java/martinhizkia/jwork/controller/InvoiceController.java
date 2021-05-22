@@ -36,6 +36,21 @@ public class InvoiceController {
         }
         return false;
     }
+
+    @RequestMapping(value = "/invoiceStatus/{id}", method = RequestMethod.PUT)
+    public Invoice changeInvoiceStatus(@PathVariable int id,
+                                       @RequestParam(value = "status") InvoiceStatus status) {
+        Invoice invoice = null;
+        try {
+            invoice = DatabaseInvoice.getInvoiceById(id);
+            invoice.setInvoiceStatus(status);
+            return invoice;
+        } catch (InvoiceNotFoundException e) {
+            e.getMessage();
+            return null;
+        }
+    }
+
     @RequestMapping(value = "/createBankPayment", method = RequestMethod.POST)
     public Invoice addBankPayment(@RequestParam(value="jobIdList") ArrayList<Integer> jobIdList,
                                   @RequestParam(value = "jobseekerId") int jobseekerId,
@@ -68,21 +83,7 @@ public class InvoiceController {
         }
     }
 
-    @RequestMapping(value = "/invoiceStatus/{id}", method = RequestMethod.PUT)
-    public Invoice changeInvoiceStatus(@PathVariable int id,
-                                       @RequestParam(value = "status") InvoiceStatus status) {
-        Invoice invoice = null;
-        try {
-            invoice = DatabaseInvoice.getInvoiceById(id);
-            invoice.setInvoiceStatus(status);
-            return invoice;
-        } catch (InvoiceNotFoundException e) {
-            e.getMessage();
-            return null;
-        }
-    }
-
-    @RequestMapping(value = "createEWalletPayment", method = RequestMethod.POST)
+    @RequestMapping(value = "/createEWalletPayment", method = RequestMethod.POST)
     public Invoice addEWalletPayment(@RequestParam(value = "jobIdList") ArrayList<Integer> jobIdList,
                                      @RequestParam(value = "jobseekerId") int jobseekerId,
                                      @RequestParam(value = "referralCode") String referralCode) {
@@ -113,8 +114,5 @@ public class InvoiceController {
             return null;
         }
     }
-
-
-
 
 }

@@ -1,5 +1,12 @@
 package martinhizkia.jwork;
+/**
+ * @author Martin Hizkia Parasi
+ * @version 16 Juni 2021
+ */
+
+
 public class EmailAlreadyExistsException extends Exception {
+
     private Jobseeker jobseeker_error;
 
     public EmailAlreadyExistsException(Jobseeker jobseeker_input){

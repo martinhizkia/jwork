@@ -1,20 +1,19 @@
+package martinhizkia.jwork;
 /**
- * Write a description of class DatabaseRecruiter here.
- *
  * @author Martin Hizkia Parasi
- * @version 25 Maret 2021
- */package martinhizkia.jwork;
-
+ * @version 16 Juni 2021
+ */
 public enum PaymentType {
-    BankPayment("Bank Payment"),
-    EwalletPayment("E-wallet Payment");
-
-    private String payment;
-    private PaymentType(String payment) {
-        this.payment = payment;
-    }
-    @Override
-    public String toString(){
-        return this.payment;
-    }
+    BankPayment {
+        @Override
+        public String toString(){
+            return "Bank Payment";
+        }
+    },
+    EwalletPayment {
+        @Override
+        public String toString(){
+            return "E-wallet Payment";
+        }
+    };
 }

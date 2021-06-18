@@ -1,124 +1,132 @@
 package martinhizkia.jwork;
 /**
- * Class yang berisi atribut dan method Job
- *
  * @author Martin Hizkia Parasi
- * @version 18 Maret 2021
+ * @version 16 Juni 2021
  */
+
 public class Job
 {
-    // instance variables - replace the example below with your own
+    // instance variables dari class Job
     private int id;
     private String name;
     private int fee;
     private Recruiter recruiter;
     private JobCategory category;
-    
-    /**
-     * Constructor for objects of class Job
-     * @param id berisikan id
-     * @param name berisikan nama jon
-     * @param recruiter berisikan object recruiter
-     * @param fee berisikan gaji
-     * @param category berisikan kategori job
-     */
-    public Job(int id, String name, Recruiter recruiter, int fee, JobCategory category)
-    {
+
+    /*
+     Constructor dari class Job
+    */
+    public Job(int id, String name, Recruiter recruiter, int fee, JobCategory category){
         this.id = id;
         this.recruiter = recruiter;
         this.name = name;
         this.fee = fee;
         this.category = category;
-        // initialise instance variables
     }
 
     /**
-     * untuk mengembalikan nilai id
-     * @return id   id
+     * Metode untuk return id
+     *
+     * @param     void
+     * @return    id
      */
-    public int getId()
-    {
+    public int getId(){
         return id;
     }
+    
     /**
-     * untuk mengembalikan nama
-     * @return name berisikan nama yang dikembalikan
+     * Metode untuk return nama
+     *
+     * @param     void
+     * @return    nama
      */
-    public String getName()
-    {
+    public String getName(){
         return name;
     }
+    
     /**
-     * untuk mengembalikan fee
-     * @return fee berisikan fee yang dikembalikan
+     * Metode untuk return fee
+     *
+     * @param     void
+     * @return    fee
      */
-    public int getFee()
-    {
+    public int getFee(){
         return fee;
     }
+    
     /**
-     * untuk mengembalikan category
-     * @return category berisikan category yang dikembalikan
+     * Metode untuk return kategori job
+     *
+     * @param     void
+     * @return    kategori
      */
-    public JobCategory getCategory()
-    {
+    public JobCategory getCategory(){
         return category;
     }
+    
     /**
-     * untuk mengembalikan recruiter
-     * @return recruiter berisikan recruiter yang dikembalikan
+     * Metode untuk return rekruter
+     *
+     * @param     void
+     * @return    rekruter
      */
-    public Recruiter getRecruiter()
-    {
+    public Recruiter getRecruiter(){
         return recruiter;
     }
+    
     /**
-     * memasukkan id 
-     * @param id berisikan id yang ingin dimasukkan
+     * Metode untuk merubah id
+     *
+     * @param     id
+     * @return    void
      */
-    public void setId(int id)
-    {
+    public void setId(int id){
        this.id = id;
     }
+    
     /**
-     * memasukkan name
-     * @param id berisikan id yang ingin dimasukkan
+     * Metode untuk merubah nama job
+     *
+     * @param     nama
+     * @return    void
      */
-    public void setName(String name)
-    {
+    public void setName(String name){
        this.name = name;
     }
+    
     /**
-     * memasukkan Recruiter
-     * @param recruiter berisikan recruiter yang ingin dimasukkan
+     * Metode untuk merubah rekruter
+     *
+     * @param     rekruter
+     * @return    void
      */
-    public void setRecruiter(Recruiter recruiter)
-    {
+    public void setRecruiter(Recruiter recruiter){
        this.recruiter = recruiter;
     }
+    
     /**
-     * memasukkan fee
-     * @param fee berisikan fee yang ingin dimasukkan
+     * Metode untuk merubah fee
+     *
+     * @param     fee
+     * @return    void
      */
-    public void setFee(int fee)
-    {
+    public void setFee(int fee){
         this.fee = fee;
     }
+    
     /**
-     * memasukkan category
-     * @param category berisikan category yang ingin dimasukkan
+     * Metode untuk merubah kategori job
+     *
+     * @param     kategori
+     * @return    void
      */
-    public void setCategory(JobCategory category)
-    {
+    public void setCategory(JobCategory category){
         this.category = category;
     }
-    /**
-     * printdata
-     */
+    
     @Override
     public String toString() {
         return "Id = " + getId() + "\nName = " + getName() + "\nRecruiter = " + getRecruiter() + "\nCity= "
                 + getRecruiter().getLocation().getCity() + "\nFee = " + getFee() + "\nCategory = " + getCategory();
-
     }
 }

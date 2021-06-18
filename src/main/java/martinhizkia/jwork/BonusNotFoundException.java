@@ -1,12 +1,18 @@
 package martinhizkia.jwork;
-public class BonusNotFoundException extends Exception {
-    private int referral_code_error;
+/**
+ * @author Martin Hizkia Parasi
+ * @version 16 Juni 2021
+ */
 
-    public BonusNotFoundException(int referral_code_input){
+public class BonusNotFoundException extends Exception {
+    private int referral_error;
+
+    public BonusNotFoundException(int referral_input){
         super("Referral Code ID: ");
-        referral_code_error = referral_code_input;
+        this.referral_error = referral_input;
     }
+
     public String getMessage() {
-        return super.getMessage() + referral_code_error + " not found";
+        return super.getMessage() + referral_error + " not found";
     }
 }

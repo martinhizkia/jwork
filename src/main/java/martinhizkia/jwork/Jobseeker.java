@@ -1,136 +1,145 @@
 package martinhizkia.jwork;
-import java.util.regex.Pattern;
-import java.util.regex.Matcher;
-import java.text.SimpleDateFormat;
+/**
+ * @author Martin Hizkia Parasi
+ * @version 16 Juni 2021
+ */
+
 import java.util.Calendar;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 
-/**
- * Class yang berisi atribut dan method Jobseeker
- *
- * @author Martin Hizkia Parasi
- * @version 18 Maret 2021
- */
 public class Jobseeker
 {
-    // instance variables - replace the example below with your own
+    // instance variables dari Jobseeker
     private int id;
     private String name;
     private String email;
     private String password;
-    public Calendar joinDate; 
-    /**
-     * Constructor for objects of class Jobseeker
-     * @param id berisikan id jobseeker
-     * @param name berisikan name jobseeker
-     * @param email berisikan email jobseeker
-     * @param password berisikan password jobseeker
-     * @param joinDate berisikan joinDate jobseeker
-     * 
-     */
-    public Jobseeker(int id, String name, String email, String password, Calendar joinDate)
-    {
+    private Calendar joinDate;
+
+    /*
+      Constructor dari Jobseeker
+    */
+    public Jobseeker(int id, String name, String email, String password, Calendar joinDate){
         this.id = id;
         this.name = name;
         setEmail(email);
         setPassword(password);
         this.joinDate = joinDate;
     }
-
-    public Jobseeker(int id, String name, String email, String password, int year, int month, int dayOfMonth) {
+    
+    public Jobseeker(int id, String name, String email, String password, int year, int month, int dayOfMonth){
         this.id = id;
         this.name = name;
         setEmail(email);
         setPassword(password);
-        this.joinDate = new GregorianCalendar(year, month - 1, dayOfMonth);
+        this.joinDate = joinDate;
     }
-
-    public Jobseeker(int id, String name, String email, String password)
-    {
+    
+    public Jobseeker(int id, String name, String email, String password){
         this.id = id;
         this.name = name;
         setEmail(email);
         setPassword(password);
     }
+
     /**
-     * untuk mengembalikan nilai id
-     * @return id  
+     * metode
+     *
+     * @param     void
+     * @return    id
      */
-    public int getId()
-    {
+    public int getId(){
         return id;
     }
+    
     /**
-     * untuk mengembalikan nilai name
-     * @return name  mengembalikan name yang diinginkan
+     * metode
+     *
+     * @param     void
+     * @return    name
      */
-    public String getName()
-    {
+    public String getName(){
         return name;
     }
+    
     /**
-     * untuk mengembalikan nilai email
-     * @return email  mengembalikan email yang diinginkan
+     * metode
+     *
+     * @param     void
+     * @return    email
      */
-    public String getEmail()
-    {
+    public String getEmail(){
         return email;
     }
+    
     /**
-     * untuk mengembalikan password
-     * @return password  mengembalikan password yang diinginkan
+     * metode
+     *
+     * @param     void
+     * @return    password
      */
-    public String getPassword()
-    {
+    public String getPassword(){
         return password;
     }
+    
     /**
-     * untuk mengembalikan joinDate
-     * @return joinDate  mengembalikan joinDate yang diinginkan
+     * metode
+     *
+     * @param     void
+     * @return    date
      */
-     public Calendar getJoinDate()
-    {
+     public Calendar getJoinDate(){
         return joinDate;
     }
+
     /**
-     * memasukkan id 
-     * @param id berisikan id yang ingin dimasukkan
+     * metode untuk ganti id
+     *
+     * @param     id
+     * @return    void
      */
-    public void setId(int id)
-    {
+    public void setId(int id){
         this.id = id;
     }
+    
     /**
-     * memasukkan name
-     * @param id berisikan id yang ingin dimasukkan
+     * metode untuk ganti name
+     *
+     * @param     name
+     * @return    void
      */
-    public void setName(String name)
-    {
+    public void setName(String Name){
         this.name = name;
     }
+    
     /**
-     * untuk memasukkan email
-     * @param email berisikan email yang ingin dimasukkan
+     * metode untuk ganti email
+     *
+     * @param     email
+     * @return    void
      */
     public void setEmail(String email){
-        String regex = "^[a-zA-Z0-9&*_~]+([\\.{1}]?[a-z0-9]+)+@[a-z0-9A-Z]+([\\.]{1}[a-z]+)\\S+(?!.*?\\.\\.)";
+        String regex = "^[a-zA-Z0-9&*_~]+([\\.{1}]?[a-z]+)+@[a-z0-9]+([\\.]{1}[a-z]+)\\S+(?!.*?\\.\\.)";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(email);
-        if(matcher.matches())
-        {
+        if(matcher.matches()){
             this.email = email;
         }
-        else
-        {
+        else{
             this.email = "";
         }
     }
+    
     /**
-     * untuk memasukkan password
-     * @param password berisikan password yang ingin dimasukkan
+     * metode untuk ganti password
+     *
+     * @param     password
+     * @return    void
      */
-    public void setPassword(String password)
-    {
+    public void setPassword(String password){
         String regex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)[a-zA-Z\\d]{6,}$";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(password);
@@ -141,20 +150,26 @@ public class Jobseeker
             this.password = "";
         }
     }
+    
     /**
-     * untuk memasukkan joinDate
-     * @param joinDate berisikan joinDate yang ingin dimasukkan
+     * metode untuk ganti date
+     *
+     * @param     join date
+     * @return    void
      */
-    public void setJoinDate(Calendar joinDate)
-    {
+    public void setJoinDate(Calendar joinDate){
         this.joinDate = joinDate;
     }
 
     public void setJoinDate(int year, int month, int dayOfMonth){
-        this.joinDate = new GregorianCalendar(year, month - 1, dayOfMonth);
+        this.joinDate = new GregorianCalendar(year, month-1, dayOfMonth);
     }
+    
     /**
-     * untuk mengeprint nama
+     * metode untuk print nama jobseeker
+     *
+     * @param     void
+     * @return    void
      */
     @Override
     public String toString() {

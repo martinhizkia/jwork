@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7ad24aa-87c5-4696-abe3-45972aec606e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/martinhizkia/jwork/controller/InvoiceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/martinhizkia/jwork/controller/InvoiceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/martinhizkia/jwork/JWork.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/martinhizkia/jwork/JWork.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/martinhizkia" />
+    <property name="last_opened_file_path" value="G:/project/jwork-android/jwork" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -88,22 +90,30 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="76" key="#Project_Structure/0.0.1536.834@0.0.1536.834" timestamp="1621327600038" />
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom" timestamp="1621508041515">
+    <state x="615" y="307" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1623746579201">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1621508041515" />
-    <state width="1493" height="142" key="GridCell.Tab.0.center" timestamp="1621508041514">
+    <state x="615" y="307" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1536.834@0.0.1536.834" timestamp="1623746579201" />
+    <state x="549" y="173" key="FileChooserDialogImpl" timestamp="1623820082108">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1621508041514" />
-    <state width="1493" height="142" key="GridCell.Tab.0.left" timestamp="1621508041514">
+    <state x="549" y="173" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1623820082108" />
+    <state width="1493" height="285" key="GridCell.Tab.0.bottom" timestamp="1623748135152">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1621508041514" />
-    <state width="1493" height="142" key="GridCell.Tab.0.right" timestamp="1621508041515">
+    <state width="1493" height="285" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1623748135152" />
+    <state width="1493" height="285" key="GridCell.Tab.0.center" timestamp="1623748135152">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="142" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1621508041515" />
+    <state width="1493" height="285" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1623748135152" />
+    <state width="1493" height="285" key="GridCell.Tab.0.left" timestamp="1623748135151">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="285" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1623748135151" />
+    <state width="1493" height="285" key="GridCell.Tab.0.right" timestamp="1623748135152">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="285" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1623748135152" />
     <state x="0" y="0" key="SettingsEditor" timestamp="1621502394214">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
@@ -112,9 +122,13 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="584" y="196" key="chooseDestDirectoryDialog/0.0.1536.834@0.0.1536.834" timestamp="1621503250090" />
-    <state x="444" y="242" key="com.intellij.ide.util.TipDialog" timestamp="1621649174569">
+    <state x="444" y="242" key="com.intellij.ide.util.TipDialog" timestamp="1623820061131">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="444" y="242" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1621649174569" />
+    <state x="444" y="242" key="com.intellij.ide.util.TipDialog/0.0.1536.834@0.0.1536.834" timestamp="1623820061131" />
+    <state x="209" y="0" key="new project wizard" timestamp="1621952782465">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="209" y="0" key="new project wizard/0.0.1536.834@0.0.1536.834" timestamp="1621952782465" />
   </component>
 </project>

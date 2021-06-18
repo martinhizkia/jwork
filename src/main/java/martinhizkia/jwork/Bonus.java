@@ -1,10 +1,8 @@
-/**
- * Write a description of class Bonus here.
- *
- * @author Martin Hizkia Parasi
- * @version 1 April 2021
- */
 package martinhizkia.jwork;
+/**
+ * @author Martin Hizkia Parasi
+ * @version 16 Juni 2021
+ */
 public class Bonus
 {
     // instance variables - replace the example below with your own
@@ -24,6 +22,7 @@ public class Bonus
         this.minTotalFee = minTotalFee;
         this.active = active;
     }
+
     /**
      * An example of a method - replace this comment with your own
      *

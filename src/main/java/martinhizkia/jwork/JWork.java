@@ -217,15 +217,14 @@ public class JWork {
         DatabaseRecruiter.addRecruiter(new Recruiter(2, "Tomi", "Tomi@example.com", "511343235", location2));
         DatabaseRecruiter.addRecruiter(new Recruiter(3, "Davai", "Davai@example.com", "123126163123", location3));
         try {
-            DatabaseJob.addJob(new Job(14, "Backend Engineer Solusimas", DatabaseRecruiter.getRecruiterById(1), 10000, JobCategory.BackEnd));
-            DatabaseJob.addJob(new Job(15, "Frontend Engineer Solusimas", DatabaseRecruiter.getRecruiterById(2), 10000, JobCategory.FrontEnd));
-            DatabaseJob.addJob(new Job(16, "UI Engineer Solusimas", DatabaseRecruiter.getRecruiterById(2), 10000, JobCategory.UI));
-            DatabaseJob.addJob(new Job(16, "UI Engineer EmasSolusi", DatabaseRecruiter.getRecruiterById(3), 10000, JobCategory.UI));
+            DatabaseJob.addJob(new Job(1, "Backend Engineer Solusimas", DatabaseRecruiter.getRecruiterById(1), 10000, JobCategory.BackEnd));
+            DatabaseJob.addJob(new Job(2, "Frontend Engineer Solusimas", DatabaseRecruiter.getRecruiterById(2), 10000, JobCategory.FrontEnd));
+            DatabaseJob.addJob(new Job(3, "UI Engineer Solusimas", DatabaseRecruiter.getRecruiterById(2), 10000, JobCategory.UI));
+            DatabaseJob.addJob(new Job(4, "UI Engineer EmasSolusi", DatabaseRecruiter.getRecruiterById(3), 10000, JobCategory.UI));
         }
         catch(RecruiterNotFoundException e){
             e.printStackTrace();
         }
-
         SpringApplication.run(JWork.class, args);
     }
 

@@ -1,77 +1,88 @@
 package martinhizkia.jwork;
 /**
- * Class Location
- *
  * @author Martin Hizkia Parasi
- * @version 18 Maret 2021
+ * @version 16 Juni 2021
  */
+
 public class Location
 {
     private String province;
     private String city;
     private String description;
     /**
-     * Constructor for objects of class Location
-     * @param province untuk memasukan provinsi
-     * @param city untuk memasukan city
-     * @param description untuk memasukan provinsi
+     * Constructor untuk class Location
      */
-    public Location(String province, String city, String description)
-    {
+    public Location(String province, String city, String description){
         this.province = province;
         this.city = city;
         this.description = description;
     }
+
     /**
-     * untuk mengembalikan province
-     * @return province  
+     * Metode untuk return provinsi
+     *
+     * @param     void
+     * @return    province
      */
-    public String getProvince()
-    {
+    public String getProvince(){
         return province;
     }
+
     /**
-     * untuk mengembalikan city
-     * @return city  
+     * Metode untuk return kota
+     *
+     * @param     void
+     * @return    city
      */
-    public String getCity()
-    {
+    public String getCity(){
         return city;
     }
+
     /**
-     * untuk mengembalikan description
-     * @return description  
+     * Metode untuk return deskripsi
+     *
+     * @param     void
+     * @return    description
      */
-    public String getDescription()
-    {
+    public String getDescription(){
         return description;
     }
+
     /**
-     * untuk memasukkan province
-     * @param province pronvisi yang ingin dimasukkan  
+     * Metode untuk merubah provinsi
+     *
+     * @param     province
+     * @return    void
      */
-    public void setProvince(String province)
-    {
+    public void setProvince(String province){
         this.province = province;
     }
+
     /**
-     * untuk memasukkan city
-     * @param city city yang ingin dimasukkan  
+     * Metode untuk merubah kota
+     *
+     * @param     kota
+     * @return    void
      */
-    public void setCity(String city)
-    {
+    public void setCity(String city){
         this.city = city;
     }
+
     /**
-     * untuk memasukkan description
-     * @param description description yang ingin dimasukkan  
+     * Metode untuk merubah deskripsi
+     *
+     * @param     description
+     * @return    void
      */
-    public void setDescription(String description)
-    {
+    public void setDescription(String description){
         this.description = description;
     }
+
     /**
-     * untuk mengeprint provinsi
+     * Metode untuk print nama dari provinsi
+     *
+     * @param     void
+     * @return    province
      */
     @Override
     public String toString() {

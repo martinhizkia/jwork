@@ -2,15 +2,19 @@ package martinhizkia.jwork;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
+/**
+ *
+ * @author Martin Hizkia Parasi
+ * @version 16 Juni 2021
+ */
 public class BankPayment extends Invoice{
     private static final PaymentType PAYMENT_TYPE = PaymentType.BankPayment;
     private int adminFee;
 
-	public BankPayment(int id, ArrayList<Job> jobs,  Jobseeker jobseeker){
+    public BankPayment(int id, ArrayList<Job> jobs, Jobseeker jobseeker){
         super(id, jobs, jobseeker);
     }
-    public BankPayment(int id, ArrayList<Job> jobs,Jobseeker jobseeker,
-                       int adminFee){
+    public BankPayment(int id, ArrayList<Job> jobs,Jobseeker jobseeker, int adminFee){
         super(id, jobs,  jobseeker);
         this.adminFee = adminFee;
     }
@@ -26,9 +30,9 @@ public class BankPayment extends Invoice{
         }
     }
 
-	@Override
-	public PaymentType getPaymentType() {
-		return PAYMENT_TYPE;
+    @Override
+    public PaymentType getPaymentType() {
+        return PAYMENT_TYPE;
     }
     public int getAdminFee() {
         return adminFee;

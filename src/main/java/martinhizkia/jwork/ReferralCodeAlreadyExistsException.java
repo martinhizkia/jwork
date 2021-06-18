@@ -1,4 +1,9 @@
 package martinhizkia.jwork;
+/**
+ * @author Martin Hizkia Parasi
+ * @version 16 Juni 2021
+ */
+
 public class ReferralCodeAlreadyExistsException extends Exception {
 
     private Bonus referral_error;

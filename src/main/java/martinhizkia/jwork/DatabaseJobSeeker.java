@@ -1,14 +1,11 @@
 package martinhizkia.jwork;
-/**
- * Write a description of class DatabaseRecruiter here.
- *
- * @author Martin Hizkia Parasi
- * @version 25/03/2021
- */
 import java.util.ArrayList;
+/**
+ * @author Martin Hizkia Parasi
+ * @version 16 Juni 2021
+ */
 
-public class DatabaseJobSeeker{
-    private static String[] listJobseeker;
+public class DatabaseJobSeeker {
     private static ArrayList<Jobseeker> JOBSEEKER_DATABASE = new ArrayList<Jobseeker>();
     private static int lastId = 0;
 
@@ -20,20 +17,20 @@ public class DatabaseJobSeeker{
         return lastId;
     }
 
-    public static Jobseeker getJobseekerById(int id) throws JobseekerNotFoundException {
+    public static Jobseeker getJobseekerById(int id) throws JobSeekerNotFoundException {
         Jobseeker temp = null;
-            for (Jobseeker jobseeker : JOBSEEKER_DATABASE) {
-                if (id == jobseeker.getId()) {
-                    temp = jobseeker;
-                    return temp;
-                }
+        for (Jobseeker jobseeker : JOBSEEKER_DATABASE) {
+            if (id == jobseeker.getId()) {
+                temp = jobseeker;
+                return temp;
             }
-            throw new JobseekerNotFoundException(id);
+        }
+        throw new JobSeekerNotFoundException(id);
     }
 
     public static boolean addJobseeker(Jobseeker jobseeker) throws EmailAlreadyExistsException {
-        for (Jobseeker jobseekere : JOBSEEKER_DATABASE) {
-            if (jobseekere.getEmail() == jobseeker.getEmail()) {
+        for (Jobseeker jobseeker1 : JOBSEEKER_DATABASE) {
+            if (jobseeker1.getEmail().equals(jobseeker.getEmail())) {
                 throw new EmailAlreadyExistsException(jobseeker);
             }
         }
@@ -42,15 +39,16 @@ public class DatabaseJobSeeker{
         return true;
     }
 
-    public static boolean removeJobseeker(int id) throws JobseekerNotFoundException {
+    public static boolean removeJobseeker(int id) throws JobSeekerNotFoundException {
         for (Jobseeker jobseeker : JOBSEEKER_DATABASE) {
             if (jobseeker.getId() == id) {
                 JOBSEEKER_DATABASE.remove(jobseeker.getId());
                 return true;
             }
         }
-        throw new JobseekerNotFoundException(id);
+        throw new JobSeekerNotFoundException(id);
     }
+
     public static Jobseeker getJobseekerLogin(String email, String password){
         for (Jobseeker jobseeker : JOBSEEKER_DATABASE) {
             if (jobseeker.getEmail().equals(email) && jobseeker.getPassword().equals(password)) {
